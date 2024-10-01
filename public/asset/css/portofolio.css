@@ -1,0 +1,149 @@
+/* Table styles */
+/* Body background matching navbar */
+body {
+    background-image: var(--gradient-1); /* Same gradient as navbar */
+    background-color: var(--primary-bg-color); /* Fallback color if the gradient fails */
+    color: var(--white); /* Set text color to white for better contrast */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh; /* Ensure body covers the full height */
+    padding: 0;
+}
+
+/* Adjustments for overall layout */
+h2 {
+    text-align: center;
+    color: var(--white); /* Ensure headings are white for readability */
+    margin-bottom: 0;
+    margin-top: 100px;
+}
+
+/* Add padding to content to give space */
+.portofolio {
+    padding: 2rem;
+}
+
+.portofolio table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-image: var(--gradient-1); /* Gradient background to match navbar */
+    border-radius: 10px; /* Rounded corners for the table */
+    overflow: hidden;
+}
+
+.portofolio th,
+.portofolio td {
+    padding: 1rem;
+    text-align: center;
+    color: var(--white); /* Ensure text color stands out */
+}
+
+.portofolio th {
+    background-color: var(--primary-color); /* Primary color for header */
+    font-weight: bold;
+}
+
+.portofolio td {
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background for rows */
+}
+
+/* Table Row Hover Effect */
+.portofolio tr:hover td {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+}
+
+/* Action buttons */
+.portofolio a,
+.portofolio button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Edit button */
+.portofolio a {
+    background-color: var(--secondary-color); /* Use secondary color for edit */
+    color: var(--white);
+    text-decoration: none;
+    border: none;
+}
+
+/* Delete button */
+.portofolio button {
+    background-color: var(--danger-color); /* Red for delete button */
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Hover effects for buttons */
+.portofolio a:hover,
+.portofolio button:hover {
+    opacity: 0.8; /* Slight opacity change on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .portofolio table {
+        font-size: 0.9rem;
+    }
+
+    .portofolio td {
+        padding: 0.5rem;
+    }
+}
+/* Add Data Button */
+.btn-add-data {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Add Data Button */
+.btn-add-data:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Edit and Delete Button Styling */
+.portofolio a.btn-edit {
+    background-color: var(--secondary-color); /* Use secondary color for edit button */
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.portofolio button.btn-delete {
+    background-color: var(--danger-color); /* Red for delete button */
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover Effect for Edit and Delete Buttons */
+.portofolio a.btn-edit:hover,
+.portofolio button.btn-delete:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Add Data Button */
+@media (max-width: 768px) {
+    .btn-add-data {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}

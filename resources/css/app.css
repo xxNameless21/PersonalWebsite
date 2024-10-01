@@ -1,0 +1,13 @@
+body{
+    background-color: black;
+}
+
+nav{
+    background-color: aqua;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+}

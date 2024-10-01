@@ -1,0 +1,159 @@
+/* Body background to match the navbar */
+body {
+    background-image: var(--gradient-1); /* Same background gradient as the navbar */
+    color: var(--white); /* Ensures readability on dark background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Profil Card container */
+.profil {
+    background-color:  rgba(255, 255, 255, 0.1); /* Dark purple card background (different from navbar but complementary) */
+    color: var(--white); /* White text for contrast */
+    padding: 5rem 2rem;
+    border-radius: 15px; /* Rounded corners */
+    max-width: 800px;
+    margin: 2rem auto; /* Center the card */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    margin-top: 100px;
+}
+
+/* Heading Styling */
+.profil h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--white); /* Ensure header is visible */
+}
+
+/* Paragraphs inside the card */
+.profil p {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    color: var(--white); /* Text color stands out on dark background */
+}
+
+/* Links and Buttons */
+.profil a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--primary-color); /* Primary color border for edit link */
+    color: var(--primary-color);
+    background: transparent;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+/* On Hover Edit Button */
+.profil a:hover {
+    background-color: var(--secondary-color); /* Secondary color on hover */
+    color: var(--white); /* Text turns white on hover */
+}
+
+/* Delete Button Styling */
+.profil button {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--danger-color); /* Red button for delete */
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.profil button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Make the forms inline */
+.profil form {
+    display: inline;
+}
+
+/* Style for both Links and Buttons */
+.profil a, .profil button {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Media Query: Adjust layout for smaller screens */
+@media screen and (max-width: 768px) {
+    .profil {
+        padding: 2rem 1rem;
+    }
+
+    .profil h2 {
+        font-size: 1.8rem;
+    }
+
+    .profil p {
+        font-size: 1.1rem;
+    }
+
+    .profil a, .profil button {
+        font-size: 0.9rem;
+    }
+}
+
+/* General Button Styling */
+.btn-add-data {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+/* Hover effect for Add Data button */
+.btn-add-data:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Styling for Edit and Delete buttons */
+.btn-edit, .btn-delete {
+    margin-right: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-edit {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-edit:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-delete {
+    background-color: var(--danger-color);
+    color: var(--white);
+    border: none;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+/* Media Query: Adjust button sizes for smaller screens */
+@media screen and (max-width: 768px) {
+    .btn-add-data, .btn-edit, .btn-delete {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}

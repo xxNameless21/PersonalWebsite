@@ -1,0 +1,129 @@
+/* General layout */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem;
+    background-image: var(--gradient-1); /* Match the background with the navbar */
+    color: var(--white); /* White text for contrast */
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    gap: 2rem;
+    margin-top: 10px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    flex: 1 1 45%; /* Make it flexible with a width of 45% */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--white); /* Ensure headings are white for readability */
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    color: var(--white);
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder color */
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border: 2px solid var(--primary-color); /* Border color when focused */
+}
+
+.contact-form textarea {
+    height: 150px; /* Set height for message box */
+    resize: vertical; /* Allow resizing vertically */
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Contact Information Styles */
+.contact-info {
+    flex: 1 1 45%; /* Make it flexible with a width of 45% */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--white); /* Ensure headings are white for readability */
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: var(--white); /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .contact-form, 
+    .contact-info {
+        flex: 100%; /* Full width on small screens */
+        margin-bottom: 2rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+    }
+
+    .contact-info li {
+        font-size: 1.1rem;
+    }
+}

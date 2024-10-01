@@ -1,0 +1,52 @@
+.header__container {
+    padding-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns for text and image */
+    gap: 2rem;
+    background-image: var(--gradient-1); /* Same background as the navbar */
+    color: var(--white);
+    align-items: center; /* Center content vertically */
+    padding-bottom: 11rem; /* Extra padding at the bottom */
+  }
+  
+  .header__content {
+    text-align: left; /* Align text to the left */
+    margin-left: 50px;
+  }
+  
+  .header__content h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+  
+  .header__content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .header__content .section__description {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .header__image {
+    text-align: center; /* Center image horizontally */
+  }
+  
+  .header__image img {
+    max-width: 100%; /* Make the image responsive */
+    width: 350px; /* Set a specific width for the image */
+    border-radius: 25rem; /* Circular image */
+  }
+  
+  .header__image::after {
+    position: absolute;
+    content: "RAYYA FAWUZZIYAH";
+    letter-spacing: 1.5rem;
+    opacity: 0.5;
+    right: 1rem;
+    top: 50%;
+    transform: translate(50%, -50%) rotate(90deg);
+    z-index: -1;
+  }
+  

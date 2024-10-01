@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #4052c6;
+  --secondary-color: #e568c3;
+  --extra-light: #f9f9f9;
+  --white: #ffffff;
+  --gradient-1: linear-gradient(to bottom right, #000000, #630961);
+  --gradient-2: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--gradient-1);
+  background-color: var(--gradient-1);
+  scroll-behavior: smooth;
+}
+
+/* General nav styles */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--gradient-1);
+    z-index: 10;
+  }
+  
+  .nav__bar {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  /* Logo styling */
+  .nav__logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-r {
+    background-image: var(--gradient-2); /* Only R gets the gradient background */
+    padding: 15px;
+    border-radius: 50%;
+    color: var(--white);
+    margin-right: 5px; /* Space between R and the rest of the logo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Navbar links */
+  .nav__links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav__links a {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav__links a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Responsive menu button */
+  .nav__menu__btn {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+    display: none; /* Hidden by default on larger screens */
+  }
+  
+  .btn__large {
+    background-image: var(--gradient-2);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5rem;
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .nav__links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-image: var(--gradient-2);
+      flex-direction: column;
+      align-items: center;
+      display: none;
+      padding: 2rem;
+    }
+  
+    .nav__links.open {
+      display: flex;
+    }
+  
+    .nav__menu__btn {
+      display: block;
+    }
+  }
+  
+footer{
+    width: 100%;
+    background-color:  rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 -4px -6px rgba(0, 0, 0, 0.1);
+}
